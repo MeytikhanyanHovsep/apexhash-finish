@@ -2036,6 +2036,10 @@ li::marker {
 
 @media (max-width:768px) {
 
+    #phone {
+        margin-top: 2px !important;
+    }
+
     .form-card .form-title {
         margin-bottom: 0px;
     }
@@ -2397,6 +2401,10 @@ li::marker {
     }
 
     .stability-card {
+        min-width: 335px;
+        max-width: 335px;
+        min-height: 241px;
+        max-height: 241px;
         padding: 10px
     }
 
