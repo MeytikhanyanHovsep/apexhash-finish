@@ -992,6 +992,11 @@ button {
     gap: 20px
 }
 
+.stability-header .section-desc {
+    max-width: 574px;
+    margin-bottom: 26px;
+}
+
 .faq-box,
 .faq-title {
     flex-direction: column
@@ -2138,6 +2143,10 @@ li::marker {
         border-radius: 25px;
         margin-left: 5px;
         margin-right: 5px
+    }
+
+    .stability-header .section-desc {
+        margin-bottom: 0px !important;
     }
 
     .hero-btn,
