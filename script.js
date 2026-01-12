@@ -1,3 +1,7 @@
+if (localStorage.getItem('cookie_accepted')) {
+    document.getElementsByClassName("cookie-container")[0].style.display = "none"
+}
+
 let menuToggle = false;
 
 function toggleMenu() {
@@ -42,7 +46,8 @@ phoneInput.addEventListener("blur", () => {
 });
 
 function closeCookieBox() {
-    document.getElementsByClassName("cookie-alerter")[0].style.display = "none"
+    document.getElementsByClassName("cookie-container")[0].style.display = "none"
+    localStorage.setItem('cookie_accepted', 'true');
 }
 
 function setReqPopUp() {
