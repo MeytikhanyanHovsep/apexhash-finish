@@ -49,6 +49,7 @@
                 <span class="phone-number font-med">+7(999) 999-99-99</span>
                 <span class="phone-time">Пн-Сб 9:00 - 18:00</span>
             </a>
+            <span class="xxl-hidden"></span>
             <button class="menu-btn" onclick="toggleMenu()">
                 <img id="menuBtn" fetchpriority="high" src="./images/icons/menu.svg" alt="Menu" />
                 <img id="closeBtn" fetchpriority="high" src="./images/icons/close.svg" class="close-icon" alt="Close" />
@@ -90,15 +91,15 @@
             <div class="hero-badges">
                 <div class="hero-badge">
                     <img fetchpriority="high" src="./images/icons/people.svg" class="badge-icon" alt="people" />
-                    <p>500+ клиентов</p>
+                    <p class="font-med">500+ клиентов</p>
                 </div>
                 <div class="hero-badge badge-radar">
                     <img fetchpriority="high" src="./images/icons/radar.svg" class="badge-icon" alt="radar" />
-                    <p>Работаем с крупнейшими хостинг-провайдерами РФ</p>
+                    <p class="font-med">Работаем с крупнейшими хостинг-провайдерами РФ</p>
                 </div>
                 <div class="hero-badge">
                     <img fetchpriority="high" src="./images/icons/check.svg" class="badge-icon" alt="check" />
-                    <p>Индивидуальные условия на майнинг-пуле</p>
+                    <p class="font-med">Индивидуальные условия на майнинг-пуле</p>
                 </div>
             </div>
             <h2 class="hero-title font-semi">
@@ -133,9 +134,23 @@
                         условия,
                         подключаем к майнинг-пулу на индивидуальных условиях, и сопроваждаем юридически. Без рисков,
                         просто и прозрачно.</p>
-                    <div class="arrow-circle">
-                        <img loading="lazy" src="./images/icons/arrows-bt.svg" alt="bottom" />
-                    </div>
+                    <a href="#form" class="arrow-circle">
+                        <svg class="arrow-svg arrow-1" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 9L12 17L20 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg class="arrow-svg arrow-2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 9L12 17L20 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <svg class="arrow-svg arrow-3" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 9L12 17L20 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
 
                 <div class="infrastructure-visual visual-second">
@@ -208,7 +223,9 @@
                     <p class="stat-label font-semi">лет на рынке</p>
                 </div>
                 <div class="stat-image-wrapper">
-                    <img loading="lazy" src="./images/data-mining.webp" class="stat-main-img" alt="mining" />
+                    <img loading="lazy" src="./images/data-mining.webp"
+                        srcset="./images/data-mining.webp 1x, ./images/data-mining@2x.webp 2x" class="stat-main-img"
+                        alt="mining" />
                 </div>
                 <div class="stat-card">
                     <img loading="lazy" src="./images/icons/flash.svg" class="stat-icon t" alt="flash" />
@@ -223,6 +240,10 @@
             </div>
 
             <div id="form" class="form-section-wrapper">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+                <span class="line line-4"></span>
                 <div class="form-card">
                     <h2 class="form-title font-semi">
                         Получите специальные <br /> условия под ваш
@@ -233,7 +254,7 @@
                         майнинг-пул под ваше
                         оборудование</p>
 
-                    <form class="main-form">
+                    <form id="callback-form" class="main-form">
                         <div class="form-inputs">
                             <div class="input-wrapper">
                                 <input type="tel" id="phone" placeholder="(999) 999-99-99"
@@ -280,7 +301,8 @@
                         прошли
                         техническую и
                         операционную проверку на нашем собственном оборудовании.</p>
-                    <img loading="lazy" class="market-card-img" src="./images/database.webp" alt="database" />
+                    <img loading="lazy" class="market-card-img" src="./images/database.webp"
+                        srcset="./images/database.webp 1x, ./images/database@2x.webp 2x" alt="database" />
                 </div>
                 <div class="market-card">
                     <h4 class="market-card-title font-med">Выгодные условия для
@@ -292,7 +314,8 @@
                         которые
                         недоступны
                         при прямом обращении в хостинг.</p>
-                    <img loading="lazy" class="market-card-img" src="./images/medal.webp" alt="medal" />
+                    <img loading="lazy" class="market-card-img" src="./images/medal.webp"
+                        srcset="./images/medal.webp 1x, ./images/medal@2x.webp 2x" alt="medal" />
                 </div>
                 <div class="market-card mt-offset">
                     <h4 class="market-card-title font-med">Юридическая <br />
@@ -303,7 +326,8 @@
                         цифровыми
                         валютами и
                         соблюдение требований законодательства.</p>
-                    <img loading="lazy" class="market-card-img" src="./images/paper.webp" alt="paper" />
+                    <img loading="lazy" class="market-card-img" src="./images/paper.webp"
+                        srcset="./images/paper.webp 1x, ./images/paper@2x.webp 2x" alt="paper" />
                 </div>
                 <div class="market-card">
                     <h4 class="market-card-title font-med">Контроль и <br /> поддержка
@@ -313,7 +337,8 @@
                         и оперативно
                         решаем
                         технические вопросы.</p>
-                    <img loading="lazy" class="market-card-img" src="./images/headphones.webp" alt="headphones" />
+                    <img loading="lazy" class="market-card-img" src="./images/headphones.webp"
+                        srcset="./images/headphones.webp 1x, ./images/headphones@2x.webp 2x" alt="headphones" />
                 </div>
             </div>
 
@@ -343,31 +368,36 @@
                 <div class="asic-card col-span-2">
                     <h3 class="asic-title font-semi">Bitmain Antminer L9 16G</h3>
                     <div class="asic-img-wrapper">
-                        <img loading="lazy" src="./images/miner-1.webp" alt="miner">
+                        <img loading="lazy" src="./images/miner-1.webp"
+                            srcset="./images/miner-1.webp 1x, ./images/miner-1@2x.webp 2x" alt="miner">
                     </div>
                 </div>
                 <div class="asic-card col-span-2">
                     <h3 class="asic-title font-semi">Bitmain antminer s21+ 235T</h3>
                     <div class="asic-img-wrapper">
-                        <img loading="lazy" src="./images/miner-2.webp" alt="miner">
+                        <img loading="lazy" src="./images/miner-2.webp"
+                            srcset="./images/miner-2.webp 1x, ./images/miner-2@2x.webp 2x" alt="miner">
                     </div>
                 </div>
                 <div class="asic-card col-span-2">
                     <h3 class="asic-title font-semi">Bitmain Antminer s21 pro 234T</h3>
                     <div class="asic-img-wrapper">
-                        <img loading="lazy" src="./images/miner-3.webp" alt="miner">
+                        <img loading="lazy" src="./images/miner-3.webp"
+                            srcset="./images/miner-3.webp 1x, ./images/miner-3@2x.webp 2x" alt="miner">
                     </div>
                 </div>
                 <div class="asic-card col-span-3">
                     <h3 class="asic-title font-semi">Bitmain Antminer s21 xp 270T</h3>
                     <div class="asic-img-wrapper">
-                        <img loading="lazy" src="./images/miner-2.webp" alt="miner">
+                        <img loading="lazy" src="./images/miner-2.webp"
+                            srcset="./images/miner-2.webp 1x, ./images/miner-2@2x.webp 2x" alt="miner">
                     </div>
                 </div>
                 <div class="asic-card col-span-3 last-asic-card">
                     <h3 class="asic-title font-semi">Bitmain Antminer s23 318T</h3>
                     <div class="asic-img-wrapper">
-                        <img loading="lazy" src="./images/miner-4.webp" alt="miner">
+                        <img loading="lazy" src="./images/miner-4.webp"
+                            srcset="./images/miner-4.webp 1x, ./images/miner-4@2x.webp 2x" alt="miner">
                     </div>
                 </div>
             </div>
@@ -385,7 +415,8 @@
             </div>
             <div class="stability-grid">
                 <div class="stability-card">
-                    <img loading="lazy" src="./images/bg-1.webp" class="stability-img" alt="bg">
+                    <img loading="lazy" src="./images/bg-1.webp"
+                        srcset="./images/bg-1.webp 1x, ./images/bg-1@2x.webp 2x" class="stability-img" alt="bg">
                     <h4 class="stability-title font-med">Актуальные <br class="mobile-hidden" /> условия
                         рынка
                     </h4>
@@ -396,7 +427,8 @@
                         стабильные и выгодные решения, соответствующие текущей ситуации на рынке.</p>
                 </div>
                 <div class="stability-card mt-card">
-                    <img loading="lazy" src="./images/bg-2.webp" class="stability-img" alt="bg">
+                    <img loading="lazy" src="./images/bg-2.webp"
+                        srcset="./images/bg-2.webp 1x, ./images/bg-2@2x.webp 2x" class="stability-img" alt="bg">
                     <h4 class="stability-title font-med">Практическая <br class="mobile-hidden" />
                         проверка
                         решений</h4>
@@ -406,7 +438,8 @@
                         оборудовании до того, как мы рекомендуем их клиентам.</p>
                 </div>
                 <div class="stability-card">
-                    <img loading="lazy" src="./images/bg-3.webp" class="stability-img" alt="bg">
+                    <img loading="lazy" src="./images/bg-3.webp"
+                        srcset="./images/bg-3.webp 1x, ./images/bg-3@2x.webp 2x" class="stability-img" alt="bg">
                     <h4 class="stability-title font-med">Готовность <br class="mobile-hidden" /> к росту
                     </h4>
                     <p class="stability-desc">Мы подбираем инфраструктуру с
@@ -422,9 +455,12 @@
     <section id="faq" class="faq-section">
         <div class="container">
             <div class="faq-box">
-                <img loading="lazy" src="./images/invest.webp" class="faq-deco-left" alt="search-icon">
-                <img loading="lazy" src="./images/invest-2.webp" class="faq-deco-right" alt="search-icon">
-
+                <img loading="lazy" src="./images/invest.webp"
+                    srcset="./images/invest.webp 1x, ./images/invest@2x.webp 2x" class="faq-deco-left"
+                    alt="search-icon" />
+                <img loading="lazy" src="./images/invest-2.webp"
+                    srcset="./images/invest-2.webp 1x, ./images/invest-2@2x.webp 2x" class="faq-deco-right"
+                    alt="search-icon" />
                 <span class="section-tag font-med">FAQ</span>
                 <h2 class="faq-title font-semi">
                     Часто задаваемые <span class="highlight-badge-faq font-semi">вопросы</span>
@@ -434,68 +470,110 @@
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(0)">
                             С какими хостинг-площадками вы работаете?
-                            <button class="faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(1)">
                             Как обеспечивается стабильность работы оборудования?
-                            <button class=" faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(2)">
                             Какие требования к объему оборудования?
-                            <button class=" faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(3)">
                             Можно ли работать официально и легально?
-                            <button class=" faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(4)">
                             С какими майнинг-пулами вы работаете?
-                            <button class=" faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFaqItem(5)">
                             Берете ли вы ответственность за оборудование?
-                            <button class=" faq-toggle">+</button>
+                            <div class="faq-toggle">
+                                <span class="line-h"></span>
+                                <span class="line-v"></span>
+                            </div>
                         </div>
-                        <p class="faq-answer hidden">
-                            Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая площадка
-                            проходит техническую и операционную проверку на нашем собственном оборудовании перед тем,
-                            как мы предлагаем её клиентам.
-                        </p>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Мы сотрудничаем с крупнейшими и проверенными хостинг-провайдерами в России. Каждая
+                                площадка
+                                проходит техническую и операционную проверку на нашем собственном оборудовании перед
+                                тем,
+                                как мы предлагаем её клиентам.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -515,9 +593,10 @@
         </div>
     </div>
 
-    <div class="request-pop-up hidden-pop-up">
+    <div onclick="setReqPopUp()" class="request-pop-up hidden-pop-up">
         <div>
-            <img class="request-img" src="./images/request.webp" alt="request" />
+            <img loading="lazy" class="request-img" src="./images/request.webp"
+                srcset="./images/request.webp 1x, ./images/request@2x.webp 2x" alt="request" />
             <h6 class="font-semi">Заявка принята</h6>
             <p>Мы свяжемся с вами <br />
                 в ближайшее время. </p>
@@ -525,7 +604,7 @@
         </div>
     </div>
 
-    <div class="privacy-pop-up hidden-pop-up">
+    <div onclick="setPrivacyPopUp()" class="privacy-pop-up hidden-pop-up">
         <div class="container">
             <div>
                 <h6 class="font-semi">Политика конфиденциальности</h6>
@@ -707,7 +786,9 @@
                         <p style="cursor: pointer;" onclick="setPrivacyPopUp()">Политика конфиденциальности</p>
                         <a href="">Пользовательское соглашение</a>
                     </div>
-                    <p class="made-by">Сделано в <img loading="lazy" src="./images/icons/ruso-logo.svg" alt="Ruso"></p>
+                    <p class="made-by">Сделано в <a href="https://ruso.ru/" target="_blank">
+
+                    <img loading="lazy" src="./images/icons/ruso-logo.svg" alt="Ruso"> </a> </p>
                 </div>
             </div>
         </div>

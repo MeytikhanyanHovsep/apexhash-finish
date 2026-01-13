@@ -126,7 +126,7 @@ button {
     line-height: 1;
     border: 1px solid #f0f0f0;
     border-radius: 50px;
-    padding: 18.5px 15px;
+    padding: 18.5px 20px;
     background-color: #fff
 }
 
@@ -226,10 +226,30 @@ button {
 }
 
 .header-phone:hover,
-.hero-btn:hover,
 .submit-btn:hover,
 .telegram-link:hover {
     filter: brightness(90%)
+}
+
+.input-wrapper.error {
+    border-color: #ff4d4d !important;
+    background-color: rgba(255, 77, 77, 0.05);
+}
+
+/* Опционально: можно добавить легкую тень, похожую на твой макет */
+.input-wrapper.error {
+    box-shadow: 0px 4px 10px rgba(255, 77, 77, 0.15);
+}
+
+.error-text {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+.hero-btn:hover {
+    scale: 1.05;
 }
 
 .social-icon:hover {
@@ -280,8 +300,16 @@ button {
     height: 56px;
     background-color: #000;
     border-radius: 15px;
-    position: relative;
+    position: fixed;
+    right: 20px;
+    box-shadow: 1px 1px 2px #00000030;
+    z-index: 50;
     place-items: center
+}
+
+.xxl-hidden {
+    width: 56px;
+    display: none;
 }
 
 .menu-btn img {
@@ -342,7 +370,7 @@ button {
     white-space: nowrap;
     align-items: center;
     background-color: #a85edb;
-    border-radius: 50px
+    border-radius: 50px;
 }
 
 .hero-badge:first-child {
@@ -453,15 +481,38 @@ button {
 .arrow-circle {
     width: 96px;
     height: 96px;
-    display: grid;
-    place-items: center;
     border-radius: 9999px;
-    background-color: #0f0814
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.arrow-circle img {
-    height: 25px
+.arrow-svg {
+    width: 10px;
+    height: 24px;
+    display: block;
+    color: #444;
+    transition: color 0.3s;
+    animation: arrow-wave 1.8s infinite ease-in-out;
 }
+
+.arrow-1 {
+    animation-delay: 0s;
+    margin-bottom: -15px;
+}
+
+.arrow-2 {
+    animation-delay: 0.3s;
+    margin-bottom: -15px;
+}
+
+.arrow-3 {
+    animation-delay: 0.6s;
+}
+
 
 .services-section {
     margin-top: 80px
@@ -503,7 +554,12 @@ button {
     width: 77px;
     height: 77px;
     padding: 18px;
-    box-shadow: 5px 5px 10px rgba(168, 94, 219, .5);
+    box-shadow:
+        0px 3px 6px 0px rgba(168, 94, 219, 0.15),
+        0px 11px 11px 0px rgba(168, 94, 219, 0.13),
+        0px 25px 15px 0px rgba(168, 94, 219, 0.08),
+        0px 45px 18px 0px rgba(168, 94, 219, 0.02),
+        0px 70px 20px 0px rgba(168, 94, 219, 0);
     border-radius: 20px;
     margin-bottom: 10px
 }
@@ -599,6 +655,7 @@ button {
 
 .form-card,
 .form-section-wrapper {
+
     flex-direction: column;
     display: flex
 }
@@ -642,7 +699,42 @@ button {
 .form-section-wrapper {
     width: 100%;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    position: relative;
+}
+
+
+.line {
+    position: absolute;
+    background: #F8F8F8;
+}
+
+.line-1 {
+    width: 2px;
+    height: 180px;
+    left: 130px;
+    top: 21px;
+}
+
+.line-2 {
+    height: 2px;
+    width: 329px;
+    left: 72px;
+    top: 64px;
+}
+
+.line-3 {
+    width: 2px;
+    height: 180px;
+    right: 188px;
+    top: 21px;
+}
+
+.line-4 {
+    height: 2px;
+    width: 386px;
+    right: 72px;
+    top: 64px;
 }
 
 .form-card {
@@ -661,12 +753,13 @@ button {
 }
 
 .form-title {
-    letter-spacing: -.05em;
+    letter-spacing: -0.19rem;
     position: relative;
     line-height: 100%;
     max-width: 640px;
     font-size: 45px;
-    margin: 0
+    margin: 0 0 0 -60px;
+    background: white;
 }
 
 .highlight-badge {
@@ -677,7 +770,7 @@ button {
     background-color: #a85edb;
     color: #fff;
     box-shadow: 2px 7px 15px #a85edb70;
-    border-radius: 25px;
+    border-radius: 20px;
     letter-spacing: -3px;
     line-height: 100%;
     font-size: inherit
@@ -798,6 +891,7 @@ button {
 .agreement-label {
     width: 100%;
     font-size: 15px;
+    line-height: 18px;
     color: #97989b
 }
 
@@ -1110,38 +1204,91 @@ button {
     width: 100%;
     border-radius: 20px;
     padding: 10px 10px 10px 35px;
-    font-size: 18px
+    font-size: 18px;
+    max-height: max-content;
 }
 
 .faq-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px
-}
-
-.faq-header:hover>.faq-toggle {
-    transform: scale(1.1);
-    filter: brightness(95%)
+    gap: 20px;
+    line-height: 20px;
 }
 
 .faq-toggle {
-    transition: .3s;
-    font-size: 28px;
+    position: relative;
+    width: 65px;
     height: 65px;
+    min-width: 65px;
     background-color: #fff;
     border-radius: 20px;
-    width: 65px;
-    min-width: 65px
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.faq-toggle span {
+    position: absolute;
+    background-color: #000;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.line-h {
+    width: 11px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+.line-v {
+    width: 1px;
+    height: 11px;
+    border-radius: 5px;
+}
+
+.faq-toggle.active-toggle .line-v {
+    transform: rotate(90deg);
+    transform-origin: center;
+    opacity: 0;
+    transition: 0.3s;
+    top: 40%;
+}
+
+
 .faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    /* Свернуто */
+    transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease;
+    opacity: 0;
+    gap: 0;
+    overflow: hidden;
+    color: #97989b !important;
+
+}
+
+.faq-answer-content {
+    min-height: 0;
+    max-height: max-content;
     max-width: 90%;
-    color: #97989b;
-    padding-bottom: 20px;
+    color: #97989b !important;
     font-size: 17px;
     line-height: 24px;
-    margin: 0
+    margin: 0;
+    display: grid;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+    grid-template-rows: 1fr;
+    padding: 16px 0;
+    opacity: 1 !important;
 }
 
 .main-footer {
@@ -1183,6 +1330,7 @@ button {
     display: flex;
     gap: 5.5px;
     max-height: 80px;
+    align-items: start;
     flex-direction: column;
     color: #97989b
 }
@@ -1196,6 +1344,23 @@ button {
     flex-direction: row;
     font-size: 18px;
     justify-content: space-between;
+}
+
+.footer-links-group a,
+.contact-item a,
+.nav-col a {
+    transition: 0.3s;
+}
+
+.footer-links-group a:hover {
+
+    cursor: pointer;
+    color: black;
+}
+
+.contact-item a:hover,
+.nav-col a:hover {
+    opacity: 0.7;
 }
 
 .contact-col {
@@ -1264,7 +1429,17 @@ button {
 .made-by {
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+}
+
+.made-by a {
+    transition: 0.3s;
+
+}
+
+.made-by a:hover {
+    cursor: pointer;
+    opacity: .7;
 }
 
 .mobile-menu {
@@ -1409,6 +1584,9 @@ button {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
     padding: 5px;
     width: 100%;
     height: 100vh;
@@ -1427,12 +1605,17 @@ button {
     height: 100%;
     display: grid;
     z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
     place-items: center;
     background: #00000030;
 }
 
 .hidden-pop-up {
-    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 
@@ -1592,6 +1775,11 @@ li::marker {
 }
 
 @media screen and (max-width:1440px) {
+
+    .xxl-hidden {
+        display: block;
+    }
+
     .header-inner {
         z-index: 2000 !important
     }
@@ -1633,6 +1821,10 @@ li::marker {
         max-height: 62px
     }
 
+    .line {
+        display: none;
+    }
+
     .logo-letters {
         gap: 2.5px;
         padding-top: 3px
@@ -1653,7 +1845,7 @@ li::marker {
 
     .hero-badge p {
 
-        font-size: 12px
+        font-size: 15px
     }
 
     .infrastructure-visual {
@@ -1707,6 +1899,12 @@ li::marker {
 }
 
 @media (max-width:1024px) {
+
+
+    .form-title {
+        margin-left: 0;
+    }
+
 
     .infrastructure-card,
     .stats-row {
@@ -1842,7 +2040,7 @@ li::marker {
 
     .hero-description {
         line-height: 16px;
-        font-size: 13px
+        font-size: 15px;
     }
 
     .mobile-break {
@@ -2056,12 +2254,13 @@ li::marker {
 
 
     .asic-img-wrapper {
-        max-height: 140px;
+        max-height: 160px;
     }
 
     .asic-img-wrapper img {
         bottom: 6px;
         width: 100;
+        max-height: 160px !important;
         height: auto;
         padding: 5px;
     }
@@ -2070,10 +2269,6 @@ li::marker {
         padding: 0;
     }
 
-
-    .asic-img-wrapper:last-child img {
-        max-height: 184px;
-    }
 
     .form-title .highlight-badge {
         top: 5px !important;
@@ -2091,6 +2286,10 @@ li::marker {
         width: 316px;
         min-width: 316px;
         justify-content: center;
+    }
+
+    .faq-answer.open {
+        padding-bottom: 0 !important;
     }
 
     .input-wrapper {
@@ -2130,13 +2329,20 @@ li::marker {
         font-size: 15px
     }
 
-    .agreement-label,
-    .hero-btn,
+    .agreement-label {
+        font-weight: 16px !important;
+        font-size: 12px;
+        padding: 2.5px 0;
+    }
+
     .phone-time,
     .section-tag,
     .service-desc {
-        padding: 2.5px 0;
-        font-size: 12px
+        font-size: 15px
+    }
+
+    .hero-btn {
+        font-size: 15px;
     }
 
     .hero-section {
@@ -2200,16 +2406,28 @@ li::marker {
         margin-bottom: 5px
     }
 
-    .faq-answer,
+    .faq-answer-content,
     .section-desc {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 16px
+    }
+
+    .faq-answer-content {
+        line-height: 16px;
+        font-size: 13px;
     }
 
     .arrow-circle {
         margin-top: 10px;
         width: 67px;
-        height: 67px
+        height: 67px;
+    }
+
+    .arrow-svg {
+        max-width: 9px;
+        min-width: 9px;
+        max-height: 15px;
+        min-height: 15px;
     }
 
     .services-section {
@@ -2446,7 +2664,6 @@ li::marker {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        gap: 14px;
         padding: 15px
     }
 
@@ -2537,8 +2754,14 @@ li::marker {
         max-width: 126px;
     }
 
-    .arrow-circle img {
-        max-height: 16px;
+    .arrow-svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .arrow-1,
+    .arrow-2 {
+        margin-bottom: -7px;
     }
 
     .faq-section .container {
@@ -2661,7 +2884,7 @@ li::marker {
 
     .hero-btn {
         max-width: 334px !important;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .hero-section {
@@ -2675,7 +2898,7 @@ li::marker {
     }
 
     .market-card-desc {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 16px
     }
 
@@ -2742,5 +2965,20 @@ li::marker {
 
     .badge-icon:nth-child(2) {
         width: 23px;
+    }
+}
+
+
+@keyframes arrow-wave {
+
+    0%,
+    100% {
+        color: #666;
+        opacity: 0.5;
+    }
+
+    50% {
+        color: #fff;
+        opacity: 1;
     }
 }
