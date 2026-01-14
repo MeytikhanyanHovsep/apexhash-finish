@@ -249,8 +249,9 @@ button {
 }
 
 .hero-btn:hover {
-    scale: 1.05;
+    transform: scale(1.05);
 }
+
 
 .social-icon:hover {
     background: #f9f9f9
@@ -415,7 +416,10 @@ button {
     border-radius: 25px;
     margin-top: 10px;
     font-size: inherit;
-    transition: .3s
+    transition: .3s;
+    will-change: transform;
+    backface-visibility: hidden;
+
 }
 
 .infrastructure-section .container {
@@ -591,11 +595,12 @@ button {
 .about-bg {
     position: absolute;
     z-index: -1;
-    bottom: 800px;
+    top: 0px;
+    mix-blend-mode: color-burn;
     left: 0;
     width: 100%;
     object-fit: cover;
-    height: 70%
+    height: 1170px
 }
 
 .market-card-img,
@@ -919,16 +924,20 @@ button {
 .market-section {
     margin-bottom: 100px;
     margin-top: 150px;
+    width: 100%;
+    overflow: hidden;
     position: relative
 }
 
 .market-bg {
     position: absolute;
-    right: 0;
-    bottom: 200px;
+    left: 50%;
+    translate: transformX(-50%);
+    top: 0;
     object-fit: cover;
+    mix-blend-mode: color-burn;
+    width: 60%;
     height: 100%;
-    width: 50%
 }
 
 .bottom-text,
@@ -1264,7 +1273,6 @@ button {
 .faq-answer {
     display: grid;
     grid-template-rows: 0fr;
-    /* Свернуто */
     transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease;
     opacity: 0;
     gap: 0;
@@ -1424,6 +1432,16 @@ button {
     gap: 35px;
     justify-content: center;
     align-items: center
+}
+
+.legal-links a,
+.legal-links p {
+    transition: 0.3s;
+}
+
+.legal-links a:hover,
+.legal-links p:hover {
+    color: black;
 }
 
 .made-by {
@@ -1655,7 +1673,6 @@ button {
     flex-direction: column;
     position: relative;
 
-    /* Добавляем, чтобы контент внутри не вылезал за границы */
     box-sizing: border-box;
 }
 
@@ -1898,7 +1915,12 @@ li::marker {
     }
 }
 
+.market-bg-2 {
+    display: none;
+}
+
 @media (max-width:1024px) {
+
 
 
     .form-title {
@@ -2096,10 +2118,6 @@ li::marker {
         font-size: 30px
     }
 
-    .about-bg {
-        height: 40%;
-        top: -10%
-    }
 
     .stats-row {
         padding: 10px 10px 0;
@@ -2751,6 +2769,22 @@ li::marker {
 
 @media (max-width:640px) {
 
+    .about-bg,
+    .market-bg {
+        display: none;
+    }
+
+    .market-bg-2 {
+        display: block;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+        height: 612px;
+        mix-blend-mode: color-burn;
+        position: absolute;
+    }
+
     .privacy-pop-up h6 {
         max-width: 70%;
     }
@@ -2857,14 +2891,6 @@ li::marker {
         gap: 5px
     }
 
-    .market-bg {
-        min-width: 100%;
-        height: 70%;
-        top: -100px;
-        z-index: -1;
-        bottom: auto;
-    }
-
     .service-card {
         padding: 10px 13px 12px 10px
     }
@@ -2896,7 +2922,7 @@ li::marker {
 
     .hero-section {
         background-position: center;
-        background-image: url('./images/bgs/main-mobile.png');
+        background-image: url('./images/bgs/main-mobile.webp');
     }
 
     .market-card-title {
