@@ -2435,6 +2435,17 @@ li::marker {
         min-height: 15px;
     }
 
+    .arrow-svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .arrow-1,
+    .arrow-2 {
+        margin-bottom: -7px;
+    }
+
+
     .services-section {
         margin-top: 50px
     }
@@ -2759,15 +2770,6 @@ li::marker {
         max-width: 126px;
     }
 
-    .arrow-svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .arrow-1,
-    .arrow-2 {
-        margin-bottom: -7px;
-    }
 
     .faq-section .container {
         padding-left: 10px;
