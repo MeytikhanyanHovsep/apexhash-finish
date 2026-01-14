@@ -2276,15 +2276,20 @@ li::marker {
         padding: 8.5px 20px 12.5px 15px !important;
     }
 
+    .hero-badge {
+        background: #bc83e5;
+    }
+
     .hero-badge:nth-child(2) {
         white-space: wrap;
-        width: 225px;
-        min-width: 225px;
+        width: 250px;
+        min-width: 250px;
     }
 
     .hero-badge:last-child {
-        width: 316px;
-        min-width: 316px;
+        width: 280px;
+        min-width: 280px;
+        white-space: wrap;
         justify-content: center;
     }
 

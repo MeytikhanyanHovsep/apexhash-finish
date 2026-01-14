@@ -128,32 +128,20 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!checkInput(phoneInput, phoneDigits.length < 10)) isValid = false;
 
         if (isValid) {
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
 
-            try {
-                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: text,
-                        parse_mode: 'HTML'
-                    })
-                });
+            const rawData = `${name}|${phone}`;
 
-                if (response.ok) {
-                    setReqPopUp();
-                    nameInput.value = "";
-                    phoneInput.value = "";
-                } else {
-                    console.log("Ошибка при отправке. Попробуйте снова.");
-                }
-            } catch (error) {
-                console.error("Ошибка сети:", error);
-                console.log("Нет связи с сервером.");
-            }
-            setReqPopUp()
-            nameInput.value = ""
-            phoneInput.value = ""
+            const encodedData = btoa(unescape(encodeURIComponent(rawData)));
+
+            const botUrl = `https://t.me/apexhash_online_bot?start=${encodedData}`;
+
+            window.open(botUrl, '_blank');
+
+            setReqPopUp();
+            nameInput.value = "";
+            phoneInput.value = "";
         }
     };
 
