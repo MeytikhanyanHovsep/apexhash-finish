@@ -321,11 +321,11 @@ button {
     position: relative;
     background-image: url('./images/bgs/main.webp'), url('./images/bgs/main-2.webp');
 
-    background-position: center center, center center;
+    background-position: center;
 
     background-repeat: no-repeat, no-repeat;
 
-    background-size: 100px auto, cover;
+    background-size: cover;
     border-radius: 40px;
     overflow: hidden;
     margin: 0 23px
