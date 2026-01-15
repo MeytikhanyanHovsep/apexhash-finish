@@ -65,7 +65,7 @@ input {
 
 body {
     background: #fafafa;
-    max-width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 
@@ -319,9 +319,13 @@ button {
 
 .hero-section {
     position: relative;
-    background-image: url('./images/bgs/main.webp');
-    background-size: cover;
-    background-position: center;
+    background-image: url('./images/bgs/main.webp'), url('./images/bgs/main-2.webp');
+
+    background-position: center center, center center;
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-size: 100px auto, cover;
     border-radius: 40px;
     overflow: hidden;
     margin: 0 23px
@@ -925,20 +929,22 @@ button {
     margin-bottom: 100px;
     margin-top: 150px;
     width: 100%;
-    overflow: hidden;
-    position: relative
+    max-width: 100vw;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;/
 }
 
 .market-bg {
     position: absolute;
-    left: 50%;
-    translate: transformX(-50%);
+    left: 45%;
     top: 0;
     object-fit: cover;
     mix-blend-mode: color-burn;
     width: 60%;
     height: 100%;
 }
+
 
 .bottom-text,
 .market-container {
@@ -1838,6 +1844,7 @@ li::marker {
         max-height: 62px
     }
 
+
     .line {
         display: none;
     }
@@ -1854,6 +1861,11 @@ li::marker {
     .header-phone {
         padding-left: 0;
         padding-right: 0
+    }
+
+    .hero-badges {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero-badge {
@@ -2922,6 +2934,7 @@ li::marker {
 
     .hero-section {
         background-position: center;
+        background-size: cover !important;
         background-image: url('./images/bgs/main-mobile.webp');
     }
 
