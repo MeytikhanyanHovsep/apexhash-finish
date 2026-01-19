@@ -983,7 +983,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 720px;
-    height: 712px;
+    max-height: 712px;
     gap: 10px
 }
 
@@ -1310,6 +1310,7 @@ button {
     transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease;
     opacity: 0;
     gap: 0;
+    padding: 0;
     overflow: hidden;
     color: #97989b !important;
 
@@ -2664,7 +2665,7 @@ li::marker {
     }
 
     .market-grid-left {
-        max-height: max-content
+        max-height: min-content
     }
 
     .market-card {
@@ -3071,5 +3072,11 @@ li::marker {
     50% {
         color: #fff;
         opacity: 1;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .market-card {
+        min-height: 290px;
     }
 }
