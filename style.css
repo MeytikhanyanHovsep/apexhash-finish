@@ -1412,7 +1412,7 @@ button {
     gap: 25px;
     max-width: 165px;
     white-space: nowrap;
-    max-height: 241px;
+    max-height: 360px;
 }
 
 .contact-item {
