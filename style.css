@@ -705,6 +705,10 @@ button {
     letter-spacing: -3px
 }
 
+.stat-value-1 {
+    margin-top: 12px !important;
+}
+
 .stat-label {
     font-size: 17px
 }
@@ -1395,6 +1399,10 @@ button {
     transition: 0.3s;
 }
 
+[x-cloak] {
+    display: none !important;
+}
+
 .footer-links-group a:hover {
 
     cursor: pointer;
@@ -2043,6 +2051,10 @@ li::marker {
 
     .privacy-title {
         font-size: 14px;
+    }
+
+    .stat-value-1 {
+        margin-top: 7px !important;
     }
 
 
