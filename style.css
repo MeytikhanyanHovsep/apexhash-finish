@@ -1945,6 +1945,10 @@ li::marker {
         max-height: 240px
     }
 
+    .market-card {
+        height: 390px;
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr)
     }
