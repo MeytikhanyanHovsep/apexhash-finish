@@ -675,11 +675,21 @@ button {
     line-height: 100%
 }
 
+.stat-card:last-child>.stat-value {
+    margin-top: 12px;
+}
+
+.stat-card-3>.stat-value {
+    margin-top: 10px;
+
+}
+
 .stat-card {
     gap: 9px;
     min-width: 192px;
     border-radius: 25px;
     max-height: 234px;
+    justify-content: start;
     background-color: #b97ee2;
     padding: 28px 0 70px;
     color: #fff;
@@ -1954,12 +1964,12 @@ li::marker {
     }
 
     .stat-card {
-        justify-content: center;
         min-width: 160px;
         max-width: 160px;
         padding-top: 30px;
         padding-bottom: 30px
     }
+
 
     .stat-icon.f {
         width: 30px;
@@ -1970,6 +1980,14 @@ li::marker {
     .stat-icon.t {
         width: 26px;
         height: 26px;
+    }
+
+    .stat-card-3 .stat-value {
+        margin-top: 12px;
+    }
+
+    .stat-card-2 .stat-value {
+        margin-top: 4px;
     }
 
     .stat-icon.s {
@@ -2345,6 +2363,10 @@ li::marker {
 
 @media (max-width:768px) {
 
+    .stat-card-2 .stat-value {
+        margin-top: 1px;
+    }
+
     #phone {
         margin-top: 2px !important;
     }
@@ -2517,10 +2539,14 @@ li::marker {
         margin-bottom: 5px
     }
 
-    .faq-answer-content,
-    .section-desc {
+    .faq-answer-content {
         font-size: 15px;
         line-height: 16px
+    }
+
+    .section-desc {
+        font-size: 15px;
+        line-height: 20px
     }
 
     .faq-answer-content {
@@ -2702,8 +2728,8 @@ li::marker {
     }
 
     .market-card {
-        min-height: 350px;
-        max-height: 350px;
+        min-height: 380px;
+        max-height: 380px;
         padding: 15px 10px
     }
 
@@ -2713,7 +2739,7 @@ li::marker {
 
     .market-card-desc {
         font-size: 16px;
-        line-height: 16px
+        line-height: 20px
     }
 
     .market-text-right {
@@ -3002,8 +3028,8 @@ li::marker {
 
 
     .market-card {
-        min-height: 270px;
-        max-height: 270px
+        min-height: 300px;
+        max-height: 300px
     }
 
     .hero-description {
@@ -3028,7 +3054,7 @@ li::marker {
 
     .market-card-desc {
         font-size: 15px;
-        line-height: 16px
+        line-height: 19px
     }
 
     .stability-grid {
