@@ -698,7 +698,7 @@ button {
 
 .form-card,
 .form-section-wrapper {
-
+    scroll-margin-top: 150px;
     flex-direction: column;
     display: flex
 }
@@ -2518,6 +2518,11 @@ li::marker {
         padding: 22px 10px 10px;
         max-width: 100% !important
     }
+
+    .form-section-wrapper {
+        scroll-margin-top: 50px;
+    }
+
 
     .md-hidden,
     .mobile-hidden {
